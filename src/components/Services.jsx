@@ -13,9 +13,13 @@ const Services = () => {
             <br />
             continue to improve
           </h1>
+            <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
+          The best choice for buying and selling your crypto assets, with the
+          various super friendly services we offer
+        </p>
         </div>
       </div>
-      <div className="flex flex-1 flex-col justify-start items-center">
+      <div className="flex flex-1 flex-col  justify-start items-center">
         <ServiceCard
           color="bg-[#2952E3]"
           title="Security Guaranteed"

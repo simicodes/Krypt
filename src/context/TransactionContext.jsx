@@ -53,7 +53,7 @@ export const TransactionProvider = ({ children }) => {
           ).toLocaleString(),
           message: transaction.message,
           keyword: transaction.keyword,
-          amount: parseInt(transaction.amount._hex) / (10 ** 18),
+          amount: parseInt(transaction.amount._hex) / 10 ** 18,
         })
       );
       console.log(structuredTransactions);
@@ -147,7 +147,10 @@ export const TransactionProvider = ({ children }) => {
       console.log(`Success - ${transactionHash.hash}`);
 
       const transactionCount = await transactionContract.getTransactionCount();
+
       setTransactionCount(transactionCount.toNumber());
+
+      window.reload();
       //   getting data from the form...
     } catch (error) {
       console.log(error);
@@ -171,7 +174,7 @@ export const TransactionProvider = ({ children }) => {
         sendTransaction,
         isLoading,
         setIsLoading,
-        transactions
+        transactions,
       }}
     >
       {children}
